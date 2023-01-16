@@ -50,10 +50,7 @@ label{
     padding: 10px;
 }
 
-.container {
 
-    background-color: rgb(148, 57, 57);
-}
 .formulario {
 display: flex;
 align-items: center;
