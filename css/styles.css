@@ -2,6 +2,15 @@
     background-color: rgb(80, 116, 148);
     max-height: 3px;
 }
+.descripcion{
+    font-family: "almarai";
+    font-weight: 500;
+    margin: 20px;
+    border: 1px solid lightgray;
+    background-color:;
+    padding: 10px;
+    border-radius: 6px;
+}
 
 .contacto{
     display: grid;
@@ -84,9 +93,10 @@ justify-content: space-evenly;
 .formularioContacto h2 {
     font-size: 60px;
     padding-right: 100px;
-    padding-left: 50px;
+    padding-left: 0px;
     font-family: "almarai";
     font-weight: 900;
+    padding-top: 0px;
 
 
 }
