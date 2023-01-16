@@ -2945,7 +2945,7 @@ textarea.form-control-lg {
 }
 
 .form-floating {
-    position: relative
+    position: relative;
 }
 
 .form-floating::before:not(.form-control:disabled) {

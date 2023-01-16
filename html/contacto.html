@@ -7,138 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
-
     <title>Ruta Segura</title>
     <link rel="icon" type="image/x-icon" href="/imgs/ico/favicon.ico">
 </head>
 
 <body>
-    <style>
-        .loading {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgb(45, 65, 162);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            transition: 1s all;
-            opacity: 0;
-        }
-
-        .loading.show {
-            opacity: 1;
-        }
-
-        .loading .spin {
-            border: 3px solid hsla(185, 100%, 62%, 0.2);
-            border-top-color: #1c4186;
-            border-radius: 50%;
-            width: 3em;
-            height: 3em;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-    <div class="loading show">
-        <div class="spin"></div>
-    </div>
-
-    <script>//======================================================================
-        // LOADING
-        //======================================================================
-        var Loading = (loadingDelayHidden = 0) => {
-
-            //-----------------------------------------------------
-            // Variables
-            //-----------------------------------------------------
-            // HTML
-            let loading = null;
-            // Retardo para borrar
-            const myLoadingDelayHidden = loadingDelayHidden;
-            // Imágenes
-            let imgs = [];
-            let lenImgs = 0;
-            let counterImgsLoading = 0;
-
-            //-----------------------------------------------------
-            // Funciones
-            //-----------------------------------------------------
-
-            /**
-             * Método que aumenta el contador de las imágenes cargadas
-             */
-            function incrementCounterImgs() {
-                counterImgsLoading += 1;
-                // Comprueba si todas las imágenes están cargadas
-                if (counterImgsLoading === lenImgs) hideLoading();
-            }
-
-            /**
-             * Ocultar HTML
-             */
-            function hideLoading() {
-                // Comprueba que exista el HTML
-                if (loading !== null) {
-                    // Oculta el HTML de "cargando..." quitando la clase .show
-                    loading.classList.remove('show');
-
-                    // Borra el HTML
-                    setTimeout(function () {
-                        loading.remove();
-                    }, myLoadingDelayHidden);
-                }
-
-            }
-
-            /**
-             * Método que inicia la lógica
-             */
-            function init() {
-                /* Comprobar que el HTML esté cargadas */
-                document.addEventListener('DOMContentLoaded', function () {
-                    loading = document.querySelector('.loading');
-                    imgs = Array.from(document.images);
-                    lenImgs = imgs.length;
-
-                    /* Comprobar que todas las imágenes estén cargadas */
-                    if (imgs.length === 0) {
-                        // No hay ninguna
-                        hideLoading();
-                    } else {
-                        // Una o más
-                        imgs.forEach(function (img) {
-                            // A cada una le añade un evento que cuando se carge la imagen llame a la funcion incrementCounterImgs
-                            img.addEventListener('load', incrementCounterImgs, false);
-                        });
-                    }
-                });
-            }
-
-            return {
-                'init': init
-            }
-        }
-
-        // Para usarlo se declara e inicia. El número es el tiempo transcurrido para borra el HTML una vez cargado todos los elementos, en este caso 1 segundo: 1000 milisegundos,
-        Loading(1000).init();
-
-    </script>
-
-
     <nav class="navbar navbar-expand-lg  bg-primary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"></a>
-            <img src="/imgs/logo_nav_white.png" alt="Logo" width="200" height="37"
-                class="d-inline-block align-text-top">
+            <a href="/index.html"><img src="/imgs/logo_nav_white.png" alt="Logo" width="200" height="37"
+                    class="d-inline-block align-text-top"> </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -161,54 +39,31 @@
             </div>
         </div>
     </nav>
+    <div class="cabecera">
+        <div class="separador">&nbsp;</div>
+
+        
+
+
+        
+
+    </div>
     <div class="separador">&nbsp;</div>
 
-    <div class="form-floating">
-        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-        <label for="floatingTextarea">Desde:</label>
-    </div>
 
+    <div><video class="video" autoplay loop muted poster="/imgs/">
+            <source src="/video/bannerCarreteraLimpio.mp4" type="video/mp4">
+        </video></div>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-light text-muted">
         <!-- Section: Social media -->
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-            <!-- Left -->
+        <section class="d-flex justify-content-center justify-content-lg-between p-0 border-bottom">
             <div class="me-5 d-none d-lg-block">
-                <span>Get connected with us on social networks:</span>
+                <span></span>
             </div>
-            <!-- Left -->
-
-            <!-- Right -->
-            <div>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-google"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            <!-- Right -->
         </section>
-        <!-- Section: Social media -->
 
-        <!-- Section: Links  -->
         <section class="">
             <div class="container text-center text-md-start mt-5">
                 <!-- Grid row -->
@@ -217,40 +72,35 @@
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
                         <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3"></i>Company name
+                            <i class="fas fa-gem me-3"></i>Nuestra Empresa
                         </h6>
                         <p class="txtfooter">
-                            <b>Ruta Segura </b>es parte del proyecto Bootcamp Full Stack Javascript de <a href="https://talentodigitalparachile.cl/" target="_blank"> Talento Digital para Chile</a>
+                            <b>Ruta Segura </b>es parte del proyecto Bootcamp Full Stack Javascript de <a
+                                href="https://talentodigitalparachile.cl/" target="_blank"> Talento Digital para
+                                Chile</a>
                         </p>
-                        
+
                     </div>
 
 
-                    <!-- Grid column -->
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
+
                         <a href="#"><img src="/imgs/logo_nav.png" alt="Ruta Segura"></a>
-                        <!-- <h6>Contacto</h6>
-                        <p>Viña del Mar, Chile</p>
-                        <p>info@example.com</p>
-                        <p><i class="fas fa-phone me-3"></i> +569 99999999</p> -->
-                        <!-- <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p> -->
                     </div>
-                    <!-- Grid column -->
                 </div>
-                <!-- Grid row -->
             </div>
         </section>
-        <!-- Section: Links  -->
 
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2023:
-            <a class="text-reset fw-bold" href="#">Rs</a>
+            © Bootcamp 2023
         </div>
         <!-- Copyright -->
     </footer>
     <!-- Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
