@@ -3,13 +3,25 @@
     max-height: 3px;
 }
 .descripcion{
+
     font-family: "almarai";
+    text-align: justify;
+    font-size: 19px;
     font-weight: 500;
     margin: 20px;
     border: 1px solid lightgray;
     background-color:;
     padding: 10px;
     border-radius: 6px;
+}
+
+.descripcion img{
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    margin: 0px auto;
+    min-width: 650px;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .contacto{
@@ -88,6 +100,12 @@ justify-content: space-evenly;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
+}
+.mapa{
+    border-radius: 20px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: fr;
 }
 
 .formularioContacto h2 {
