@@ -3,7 +3,7 @@
     max-height: 3px;
 }
 .descripcion{
-
+    max-width: 100%;
     font-family: "almarai";
     text-align: justify;
     font-size: 19px;
@@ -19,7 +19,8 @@
     border: 1px solid lightgray;
     border-radius: 20px;
     margin: 0px auto;
-    min-width: 650px;
+    min-width: 100%;
+    max-width: 100%;
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -116,6 +117,7 @@ justify-content: space-evenly;
     grid-template-columns: 1fr;
 }
 .mapa{
+    max-width: 100%;
     border-radius: 20px;
     padding: 50px;
     display: grid;
