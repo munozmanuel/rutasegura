@@ -24,7 +24,12 @@
     display: grid;
     grid-template-columns: 1fr;
 }
-
+.contenedorMapa{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
 .contacto{
     display: grid;
     grid-template-columns: 2fr 1fr;
